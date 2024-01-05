@@ -11,7 +11,7 @@ pipeline {
                 docker { image 'gitguardian/ggshield:latest' }
             }
             environment {
-                GITGUARDIAN_API_KEY = credentials('c6b6Bddab27B6DC4d8B974ccfEDe87CbeCee3AbFFd1cCb88A58E3fD4D8C6B54D7DBB45a')
+                GITGUARDIAN_API_KEY = credentials('gitguardian-api-key')
             }
             steps {
                 sh 'ggshield secret scan ci'
